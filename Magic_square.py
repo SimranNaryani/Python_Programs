@@ -1,3 +1,13 @@
+"""
+Generating a magic square
+Code by: Simran Naryani 
+
+Magic Square:
+- The square is itself having smaller squares (same as a matrix) each containing a number
+- The numbers in each vertical, horizontal, and diagonal row add up to the same value
+- The dimension of the square matrix is an (odd integer x odd integer) e.g., 3×3, 5×5, 7×7
+"""
+
 def generateSquare(n): 
 	magicSquare = [[0 for x in range(n)] 
 					for y in range(n)] 
@@ -31,8 +41,5 @@ def generateSquare(n):
 									end = '') 
 			if j == n - 1: 
 				print() 
-n = 5
+n = 5  #odd value for magic square
 generateSquare(n)
-print("Code by Simran Naryani")
-
-
