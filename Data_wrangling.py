@@ -1,11 +1,16 @@
-#Importing required libraries
-import pandas as pd #Pandas for data analysis and manipulation
-import matplotlib.pyplot as plt #Matplotlib for creating visualizations
+"""
+Basic data wrangling operations
+Code by: Simran Naryani 
 
-#Dataset URL: "https://www.kaggle.com/datasets/farhansadeek/ap-exam-curve-data-2022"
+Data wrangling- Data wrangling is the process of removing errors and combining complex datasets to make them more accessible and easier to analyze
+"""
 
-#Reading and printing dataset
-mydataset = pd.read_csv("AP Exam Curve 2022.csv") #Store in the same folder
+#importing required libraries
+import pandas as pd #pandas for data analysis and manipulation
+import matplotlib.pyplot as plt #matplotlib for creating visualizations
+
+#dataset URL: "https://www.kaggle.com/datasets/farhansadeek/ap-exam-curve-data-2022"
+mydataset = pd.read_csv("AP Exam Curve 2022.csv") #download dataset and store in the same folder
 print("\nOriginal Dataset is given below\n")
 print(mydataset)
 
@@ -36,12 +41,10 @@ nullvalsdataset = mydataset.isnull()
 print("\n\nUsing  isnull() function on our Original Dataset\n")
 print(nullvalsdataset)
 
-#Filling null values if any
+#Filling null values with 0
 fillingvals = mydataset.fillna(0)
 print(fillingvals)
 
 #Checking for outliers
 mydataset['Total'].plot(kind = 'box')
 plt.show()
-
-print("Code by Simran Naryani")
