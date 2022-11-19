@@ -1,3 +1,8 @@
+"""
+Word Guesser Game
+Code by: Simran Naryani
+"""
+
 #Import required libraries
 import time #To include waiting time
 
